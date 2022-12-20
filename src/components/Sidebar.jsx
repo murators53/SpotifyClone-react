@@ -1,10 +1,15 @@
 import { Icon } from "Icons";
+import { useSelector } from "react-redux";
 import logo from "../img/logo.svg";
 import DownloadApp from "./Sidebar/DownloadApp";
 import Menu from "./Sidebar/Menu";
 import Playlist from "./Sidebar/Playlist";
+import SidebarCover from "./Sidebar/SidebarCover";
 
 export default function Sidebar() {
+
+  const {sidebar} = useSelector(state=>state.playerState)
+
   return (
     <aside className="w-60 pt-6 flex flex-shrink-0 flex-col bg-black">
       <a href="" className="mb-7 px-6">
@@ -43,6 +48,8 @@ export default function Sidebar() {
       <Playlist />  
 
       <DownloadApp/>
+
+      {sidebar && <SidebarCover />}
 
     </aside>
   );

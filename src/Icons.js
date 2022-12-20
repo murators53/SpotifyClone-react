@@ -1,11 +1,14 @@
-import { AiOutlineHome, AiOutlineSearch, AiFillCaretDown } from "react-icons/ai";
-import { ImBooks } from "react-icons/im";
+import { AiOutlineHome, AiOutlineSearch, AiFillCaretDown, AiOutlineHeart } from "react-icons/ai";
+import { ImBooks, ImVolumeMute2, ImVolumeLow, ImVolumeMedium, ImVolumeHigh } from "react-icons/im";
 import { GiLoveSong } from "react-icons/gi";
 import { HiPlusSm } from "react-icons/hi";
-import { MdDownloading } from "react-icons/md";
+import { SlArrowUp } from "react-icons/sl";
+import { TbMicrophone2 } from "react-icons/tb";
+import { MdDownloading,MdOutlineQueueMusic,MdOutlinePictureInPictureAlt, MdDevices } from "react-icons/md";
 import { GrPrevious, GrNext } from "react-icons/gr";
-import { FiExternalLink } from "react-icons/fi";
-import { BiPlay } from "react-icons/bi";
+import { FiExternalLink,FiRepeat } from "react-icons/fi";
+import { BsFullscreen,BsShuffle } from "react-icons/bs";
+import { BiPlay,BiSkipPrevious,BiSkipNext,BiPause } from "react-icons/bi";
 const HomeIcon = ({ size }) => {
   return <AiOutlineHome size={size} />;
 };
@@ -49,6 +52,69 @@ const PlayIcon = ({ size }) => {
   return <BiPlay size={size} />
 };
 
+const PauseIcon = ({ size }) => {
+  return <BiPause size={size} />
+};
+
+const PlayerPrevIcon = ({ size }) => {
+  return <BiSkipPrevious size={size} />
+};
+
+const PlayerNextIcon = ({ size }) => {
+  return <BiSkipNext size={size} />
+};
+const FullScreenIcon = ({ size }) => {
+  return <BsFullscreen size={size} />
+};
+
+const RepeatIcon = ({ size }) => {
+  return <FiRepeat size={size} />
+};
+
+const ShuffleIcon = ({ size }) => {
+  return <BsShuffle size={size} />
+};
+
+const QueueIcon = ({ size }) => {
+  return <MdOutlineQueueMusic size={size} />
+};
+
+const PictureInIcon = ({ size }) => {
+  return <MdOutlinePictureInPictureAlt size={size} />
+};
+
+const HeartIcon = ({ size }) => {
+  return <AiOutlineHeart size={size} />
+};
+
+const MuteIcon = ({ size }) => {
+  return <ImVolumeMute2 size={size} />
+};
+
+const MuteLowIcon = ({ size }) => {
+  return <ImVolumeLow size={size} />
+};
+
+const MuteMediumIcon = ({ size }) => {
+  return <ImVolumeMedium size={size} />
+};
+
+const MuteHighIcon = ({ size }) => {
+  return <ImVolumeHigh size={size} />
+};
+
+const DeviceIcon = ({ size }) => {
+  return <MdDevices size={size} />
+};
+
+const MicrophoneIcon = ({ size }) => {
+  return <TbMicrophone2 size={size} />
+};
+
+const ArrowUpIcon = ({ size }) => {
+  return <SlArrowUp size={size} />
+};
+
 const Icon = ({ name, size = 24 }) => {
   const icons = {
     home: HomeIcon,
@@ -61,7 +127,23 @@ const Icon = ({ name, size = 24 }) => {
     next:NextIcon,
     down:DownIcon,
     link:LinkIcon,
-    play:PlayIcon
+    play:PlayIcon,
+    pause:PauseIcon,
+    plprev:PlayerPrevIcon,
+    plnext:PlayerNextIcon,
+    fullscreen:FullScreenIcon,
+    repeat:RepeatIcon,
+    shuffle:ShuffleIcon,
+    queue:QueueIcon,
+    picturein:PictureInIcon,
+    heart:HeartIcon,
+    mute:MuteIcon,
+    mutelw:MuteLowIcon,
+    mutemd:MuteMediumIcon,
+    mutehg:MuteHighIcon,
+    device:DeviceIcon,
+    microphone:MicrophoneIcon,
+    arrowup:ArrowUpIcon,
   };
 
   const Component = icons[name];

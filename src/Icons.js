@@ -3,11 +3,12 @@ import { ImBooks, ImVolumeMute2, ImVolumeLow, ImVolumeMedium, ImVolumeHigh } fro
 import { GiLoveSong } from "react-icons/gi";
 import { HiPlusSm } from "react-icons/hi";
 import { SlArrowUp } from "react-icons/sl";
+import { RxExitFullScreen,RxEnterFullScreen } from "react-icons/rx";
 import { TbMicrophone2 } from "react-icons/tb";
 import { MdDownloading,MdOutlineQueueMusic,MdOutlinePictureInPictureAlt, MdDevices } from "react-icons/md";
 import { GrPrevious, GrNext } from "react-icons/gr";
 import { FiExternalLink,FiRepeat } from "react-icons/fi";
-import { BsFullscreen,BsShuffle } from "react-icons/bs";
+import { BsShuffle,BsSpotify } from "react-icons/bs";
 import { BiPlay,BiSkipPrevious,BiSkipNext,BiPause } from "react-icons/bi";
 const HomeIcon = ({ size }) => {
   return <AiOutlineHome size={size} />;
@@ -63,8 +64,13 @@ const PlayerPrevIcon = ({ size }) => {
 const PlayerNextIcon = ({ size }) => {
   return <BiSkipNext size={size} />
 };
+
 const FullScreenIcon = ({ size }) => {
-  return <BsFullscreen size={size} />
+  return <RxEnterFullScreen size={size} />
+};
+
+const FullScreenExitIcon = ({ size }) => {
+  return <RxExitFullScreen size={size} />
 };
 
 const RepeatIcon = ({ size }) => {
@@ -115,6 +121,10 @@ const ArrowUpIcon = ({ size }) => {
   return <SlArrowUp size={size} />
 };
 
+const SpotifyIcon = ({ size }) => {
+  return <BsSpotify size={size} />
+};
+
 const Icon = ({ name, size = 24 }) => {
   const icons = {
     home: HomeIcon,
@@ -132,6 +142,7 @@ const Icon = ({ name, size = 24 }) => {
     plprev:PlayerPrevIcon,
     plnext:PlayerNextIcon,
     fullscreen:FullScreenIcon,
+    fullscreenexit:FullScreenExitIcon,
     repeat:RepeatIcon,
     shuffle:ShuffleIcon,
     queue:QueueIcon,
@@ -144,6 +155,7 @@ const Icon = ({ name, size = 24 }) => {
     device:DeviceIcon,
     microphone:MicrophoneIcon,
     arrowup:ArrowUpIcon,
+    spotify:SpotifyIcon,
   };
 
   const Component = icons[name];

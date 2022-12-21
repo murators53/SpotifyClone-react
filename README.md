@@ -8,7 +8,5 @@
  - For player range slider  `react-range` 
  - Lots of tailwind :)
 
-In the project directory, you can run:
-
 ### `Screen`
 

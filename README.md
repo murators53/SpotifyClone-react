@@ -1,9 +1,12 @@
-# Getting Started with Create React App
+# Spotify Clone React Redux Toolkit with Tailwind
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What I Practice
 
-## Available Scripts
-
+ - `<Sidebar />` component
+ -`tailwind` için `line-clamp`
+ - For audio folders `react-use` 
+ - For player range slider  `react-range` 
+   
 In the project directory, you can run:
 
 ### `npm start`

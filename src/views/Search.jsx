@@ -6,6 +6,7 @@ import ScrollContainer from 'react-indiana-drag-scroll'
 import { Icon } from "Icons";
 import Category from "CategoryItem";
 import WideCategory from "WideCategoryItem";
+
 function Search() {
 
   const favoritesRef = useRef()

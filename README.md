@@ -8,5 +8,8 @@
  - For player range slider  `react-range` 
  - Lots of tailwind :)
 
-### `Screen`
+### `Screen` </br>
+
+![](screen.gif)  
+
 
